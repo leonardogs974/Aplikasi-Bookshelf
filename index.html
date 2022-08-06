@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+
+<body>
+    <div id="textBox">
+    </div>
+    <header>
+        <h1>Bookshelf Apps <i class="fa fa-book" aria-hidden="true"></i></h1>
+    </header>
+
+    <main>
+        <div class="formInput">
+            <form id="formDataBuku">
+                <h2>Input Data Buku</h2>
+                <div class="formComponent">
+                    <label for="inputJudul">Judul Buku</label> <br>
+                    <input type="text" name="inputJudul" id="inputJudul" placeholder="Masukkan Judul Buku" required>
+                </div>
+                <div class="formComponent">
+                    <label for="inputPenulis">Penulis Buku</label> <br>
+                    <input type="text" name="inputPenulis" id="inputPenulis" placeholder="Masukkan Nama Penulis"
+                        required>
+                </div>
+                <div class="formComponent">
+                    <label for="inputTahun">Tahun Buku</label> <br>
+                    <input type="number" name="inputTahun" id="inputTahun" placeholder="Masukan Tahun Terbit Buku"
+                        required pattern="\d*" maxlength="4">
+                </div>
+                <div class="formComponent">
+                    <label for="check">Selesai Dibaca?</label>
+                    <input type="checkbox" id="inputKeterangan" name="check">
+                </div>
+                <div class="formComponent">
+                    <input type="submit" name="btnSubmit" onclick="addBook()" id="btnSubmit" class="btnSubmit" value="Input Data">
+                </div>
+
+                <div class="formComponent">
+                    <input type="submit" name="btnUpdate" id="btnUpdate" class="btnUpdate" value="Update Data" disabled="true">
+                </div>
+            </form>
+        </div>
+
+        <div class="information">
+            <div class="infoComponent">
+                <h2>Cari Buku Berdasarkan Judul</h2>
+                <form id="formCari">
+                    <input type="text" name="boxCari" id="boxCari" placeholder="Silahkan Ketikan Judul Buku">
+                </form>
+            </div>
+            <div class="infoComponent">
+                <h2>Belum Selesai Dibaca</h2>
+                <div class="list-item" id="uncompleted"></div>
+            </div>
+            <div class="infoComponent">
+                <h2>Selesai Dibaca</h2>
+                <div class="list-item" id="completed"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
